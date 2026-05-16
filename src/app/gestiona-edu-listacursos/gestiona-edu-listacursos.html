@@ -1,0 +1,56 @@
+<div
+  class="container bg-light w-75 mx-auto rounded-4 mt-4 p-4 shadow-sm"
+  *ngFor="let curso of cursos">
+
+    <h3
+      class="card-title bg-secondary-subtle text-dark p-3 rounded-2">
+
+      {{ curso.nombre }} - {{ curso.duracion }} horas
+
+    </h3>
+
+    <div class="mt-3">
+
+        <p>
+          <strong>Docente:</strong>
+          {{ curso.docente }}
+        </p>
+
+        <p
+          [ngClass]="curso.estado
+            ? 'text-success'
+            : 'text-danger'">
+
+            <strong>Estado:</strong>
+            {{ curso.estado ? 'Activo' : 'Inactivo' }}
+
+        </p>
+
+        <p>{{ curso.descripcion }}</p>
+
+        <p>
+          <strong>Duración:</strong>
+          {{ curso.duracion }} horas
+        </p>
+
+        <button
+          class="btn btn-warning me-2"
+          (click)="cambiarEstado(curso)">
+
+          {{ curso.estado
+              ? 'Desactivar'
+              : 'Activar' }}
+
+        </button>
+
+        <button
+          class="btn btn-danger"
+          (click)="eliminar(curso.id)">
+
+          Eliminar
+
+        </button>
+
+    </div>
+
+</div>

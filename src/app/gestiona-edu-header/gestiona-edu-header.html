@@ -1,0 +1,38 @@
+<div class="gestiona-edu-header-container">
+  <div class="bg-primary-subtle p-4 rounded-2 mt-2 mb-4">
+      <h1 class="text-center text-dark mt-3 fw-bold">
+      {{ Titulo }}
+      </h1>
+      <p class="text-center text-secondary fs-5 mb-4">
+      {{ descripcion }}
+    </p>
+  </div>
+
+    <button
+      class="btn btn-primary d-block mx-auto"
+      (click)="mostrarMensaje()">
+
+      {{ mensajeVisible
+          ? 'Ocultar Mensaje'
+          : 'Mostrar Mensaje' }}
+
+    </button>
+
+    <div
+  class="card bg-light
+ w-50 mx-auto rounded-4 mt-4"
+  *ngIf="mensajeVisible">
+
+  <div class="card-body">
+
+    <p class="text-center text-dark fs-6 mb-0">
+      {{ mensaje }}
+    </p>
+
+  </div>
+
+</div>
+
+  
+
+</div>

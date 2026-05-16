@@ -1,0 +1,95 @@
+<div class="container mt-5">
+
+  <div class="card mx-auto shadow-sm rounded-4">
+
+    <div class="card-body p-4">
+
+      <h2 class="text-center mb-4 text-primary">
+        Agregar Curso
+      </h2>
+
+      <form (ngSubmit)="agregarCurso()" #form="ngForm">
+
+        <div class="mb-3">
+
+          <label for="nombre" class="form-label">
+            Nombre
+          </label>
+
+          <input
+            type="text"
+            id="nombre"
+            class="form-control"
+            [(ngModel)]="nombre"
+            name="nombre"
+            placeholder="Ingrese el nombre del curso"
+            required>
+
+        </div>
+
+        <div class="mb-3">
+
+          <label for="docente" class="form-label">
+            Docente
+          </label>
+
+          <input
+            type="text"
+            id="docente"
+            class="form-control"
+            [(ngModel)]="docente"
+            name="docente"
+            placeholder="Ingrese el nombre del docente"
+            required>
+
+        </div>
+
+        <div class="mb-3">
+
+          <label for="descripcion" class="form-label">
+            Descripción
+          </label>
+
+          <textarea
+            id="descripcion"
+            class="form-control"
+            [(ngModel)]="descripcion"
+            name="descripcion"
+            placeholder="Ingrese la descripción del curso">
+
+          </textarea>
+
+        </div>
+
+        <div class="mb-4">
+
+          <label for="duracion" class="form-label">
+            Duración (horas)
+          </label>
+
+          <input
+            type="number"
+            id="duracion"
+            class="form-control"
+            [(ngModel)]="duracion"
+            name="duracion"
+            placeholder="Ingrese la duración del curso"
+            required>
+
+        </div>
+
+        <button
+          type="submit"
+          class="btn btn-primary w-100">
+
+          Agregar Curso
+
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
