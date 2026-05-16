@@ -25,5 +25,6 @@ export class GestionaEduListacursos {
   eliminar(cursoId: number) {
     this.eliminarCurso.emit(cursoId);
   }
+  
 
 }
